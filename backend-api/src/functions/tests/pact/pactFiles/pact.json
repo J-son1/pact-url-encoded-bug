@@ -1,0 +1,43 @@
+{
+  "consumer": {
+    "name": "Consumer"
+  },
+  "interactions": [
+    {
+      "_id": "52ca544e-b410-490d-8643-df13b8ca4648",
+      "description": "Invalid basic auth credentials",
+      "providerStates": [
+        {
+          "name": "badDummySecret is not a valid basic auth secret"
+        },
+        {
+          "name": "mockComponentId is the component ID"
+        }
+      ],
+      "request": {
+        "body": "grant_type=client_credentials",
+        "headers": {
+          "Authorization": "Basic badDummySecret",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "method": "POST",
+        "path": "/token"
+      },
+      "response": {
+        "status": 400
+      }
+    }
+  ],
+  "metadata": {
+    "pact-jvm": {
+      "version": "4.6.5"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "Provider"
+  },
+  "createdAt": "2024-07-10T15:32:48+00:00"
+}
